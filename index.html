@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Documentation</title>
+<!-- DaisyUI -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- Dark Mode -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+<!-- iOS font -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<!-- favicon -->
+<link rel="icon" type="image" href="img/paper.png" />
+<style>
+  /* Letter animation for all title letters */
+  .animated-title {
+    display: inline-block;
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem; /* smaller default for mobile */
+    color: #22c55e; /* green-500 */
+    white-space: nowrap;
+  }
+
+  .animated-title span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+  }
+
+  /* Stagger animation for Welcome letters */
+  .animated-title.welcome span:nth-child(1) { animation-delay: 0s; }
+  .animated-title.welcome span:nth-child(2) { animation-delay: 0.1s; }
+  .animated-title.welcome span:nth-child(3) { animation-delay: 0.2s; }
+  .animated-title.welcome span:nth-child(4) { animation-delay: 0.3s; }
+  .animated-title.welcome span:nth-child(5) { animation-delay: 0.4s; }
+  .animated-title.welcome span:nth-child(6) { animation-delay: 0.5s; }
+  .animated-title.welcome span:nth-child(7) { animation-delay: 0.6s; }
+
+  /* Stagger animation for "to Power2Connect" */
+  .animated-title.power span:nth-child(1)  { animation-delay: 1.2s; }
+  .animated-title.power span:nth-child(2)  { animation-delay: 1.3s; }
+  .animated-title.power span:nth-child(3)  { animation-delay: 1.4s; }
+  .animated-title.power span:nth-child(4)  { animation-delay: 1.5s; }
+  .animated-title.power span:nth-child(5)  { animation-delay: 1.6s; }
+  .animated-title.power span:nth-child(6)  { animation-delay: 1.7s; }
+  .animated-title.power span:nth-child(7)  { animation-delay: 1.8s; }
+  .animated-title.power span:nth-child(8)  { animation-delay: 1.9s; }
+  .animated-title.power span:nth-child(9)  { animation-delay: 2.0s; }
+  .animated-title.power span:nth-child(10) { animation-delay: 2.1s; }
+  .animated-title.power span:nth-child(11) { animation-delay: 2.2s; }
+  .animated-title.power span:nth-child(12) { animation-delay: 2.3s; }
+  .animated-title.power span:nth-child(13) { animation-delay: 2.4s; }
+  .animated-title.power span:nth-child(14) { animation-delay: 2.5s; }
+  .animated-title.power span:nth-child(15) { animation-delay: 2.6s; }
+  .animated-title.power span:nth-child(16) { animation-delay: 2.7s; }
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Paragraph and button fade in after full title animation */
+  .fade-in-later {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+    animation-delay: 3.5s;
+  }
+
+  /* ===== Responsive adjustments ===== */
+  @media (min-width: 640px) { /* sm */
+    .animated-title { font-size: 3.5rem; }
+  }
+  @media (min-width: 768px) { /* md */
+    .animated-title { font-size: 4rem; }
+  }
+  @media (min-width: 1024px) { /* lg */
+    .animated-title { font-size: 4.5rem; }
+  }
+
+  /* Center container width on mobile */
+  .hero-content .max-w-md {
+    max-width: 90%; /* mobile padding */
+  }
+</style>
+</head>
+<body>
+<div class="hero bg-base-200 min-h-screen">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+
+      <!-- Welcome letters -->
+      <h1 class="animated-title welcome">
+        <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>
+      </h1>
+
+      <!-- to Power2Connect letters -->
+      <h1 class="animated-title power">
+        <span>t</span><span>o</span> <br>
+        <span>P</span><span>o</span><span>w</span><span>e</span><span>r</span><span>2</span><span>C</span><span>o</span><span>n</span><span>n</span><span>e</span><span>c</span><span>t</span>
+      </h1>
+
+      <!-- Paragraph and button -->
+      <p class="py-6 fade-in-later text-sm sm:text-base md:text-lg">
+        We provide power and internet regardless of your status in life.
+      </p>
+
+      <a href="documentation.html" class="btn text-white bg-green-400 hover:bg-green-900 fade-in-later px-6 py-3">
+        Proceed to Read the Documentation
+      </a>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
